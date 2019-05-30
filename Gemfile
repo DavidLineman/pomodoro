@@ -62,3 +62,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise'
+gem 'materialize-sass', '~> 1.0.0'
+gem 'jquery-rails'
+gem 'material_icons'

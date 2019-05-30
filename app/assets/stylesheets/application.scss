@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+@import "materialize";
+
+
+.nav-wrapper {
+  color: green;
+}
