@@ -7,11 +7,18 @@ class PomodorosController < ApplicationController
 
   def create
     current_user.pomodoros.create!
-    redirect_to pomodoros_path
+    redirect_to pomodoro_path(current_user)
   end
 
   def show
+    @pomodoros = current_user.pomodoros
+  end
 
+
+  private 
+
+  def pomodoro_params
+    params.require(:user)
   end
 
 end
