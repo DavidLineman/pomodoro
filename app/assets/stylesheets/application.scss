@@ -16,9 +16,16 @@
 
 @import "materialize";
 
-
-.nav-wrapper {
-  color: green;
+.title {
+  font-size: 30px;
+  font-weight: bold;
+  -webkit-text-stroke: 1px black;
+  margin: 11px 0 17px 0;
+  font-size: 80px;
+  line-height: 80px;
+  color: #f1ebe5;
+  text-shadow: 0 13.36px 8.896px #c4b59d,0 -2px 1px #fff;
+  letter-spacing: -4px;
 }
 
 
@@ -118,7 +125,7 @@
   border-radius: 18px;
   margin-left: -9px;
   margin-top: -6px;
-  background: #4d4b63;
+  background: #040311;
   z-index: 11;
 }
 
