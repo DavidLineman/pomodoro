@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_30_191919) do
+ActiveRecord::Schema.define(version: 2019_05_31_001822) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "pomodoros", force: :cascade do |t|
+    t.datetime "started_at"
+    t.string "caption"
+    t.integer "duration_in_minutes"
+    t.boolean "completed"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_pomodoros_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false

@@ -1,0 +1,11 @@
+<% @pomodoros.each do |pomodoro| %>
+  <p><%= pomodoro.id %></p>
+<% end %>
+
+
+
+<%= simple_form_for Pomodoro.new do |f| %>
+  
+  <%= f.button :submit %>
+
+<% end %>
