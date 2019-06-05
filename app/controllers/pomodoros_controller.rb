@@ -6,12 +6,13 @@ class PomodorosController < ApplicationController
   end
 
   def create
-    current_user.pomodoros.create!
-    redirect_to pomodoro_path(current_user)
+    @pomodoro = current_user.pomodoros.build(duration_in_minutes: 1, started_at: Time.now)
+    @pomodoro.save!
+    redirect_to pomodoro_path(@pomodoro)
   end
 
   def show
-    @pomodoros = current_user.pomodoros
+    @pomodoro = current_user.pomodoros.find(params[:id])
   end
 
 
