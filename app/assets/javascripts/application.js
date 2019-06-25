@@ -28,24 +28,41 @@ $(document).ready(function () {
     const minsHand = document.querySelector('.min-hand');
     const hourHand = document.querySelector('.hour-hand');
 
+    // Notes/Question
+
+    // Do I need seconds, minutes, hour variables set up? 
+    // Do 
+    // 25 minutes is 1500000 milliseconds
+    // Connecting data between js and database
+    
+
+
+    ///////////////////////////////////////////////////////////////
 
 // set started_at as the begin time
 
 
+window.setTimeout(alert, 2000)
+
+
 // add the duration_in_minutes and that is the end time
+let durationInMinutes = setTimeout(function () {
+  $('someID')
+})
 // Need to know how much time is between now and the end time
+
 // JS Wait function? JQuery Wait function? Alert saying "you are done!"
 
 
 
 var started_at = $('#pomodoro-data').data('started_at');
+console.log(started_at)
+var startedAtDate = new Date();
 
-var startedAtDate = new Date(started_at);
 // convert started_at into a date
-  let date = started_at.parse
-// JS date.pars
-debugger;
-alert(startedAtDate.getDay());
+let today = Date.parse(startedAtDate) // JS date.pars
+console.log(today)
+//  alert(startedAtDate.getDay());
 
 
 
