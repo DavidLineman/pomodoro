@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Things to do next: 
 
-Things you may want to cover:
+- Create a route for finish
 
-* Ruby version
+- Finish the form to submit to the the finsh path
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Write the AJAX that does the finish_pomodoro_path(@pomodoro)

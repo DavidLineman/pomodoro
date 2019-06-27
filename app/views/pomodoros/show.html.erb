@@ -24,3 +24,7 @@
   <button class="waves-effect waves-light btn-small red accent-4 pause">Pause</button>
   <button class="waves-effect waves-light btn-small red accent-4 reset">Reset</button>
 </div>
+
+<%= simple_form_for finish_index_path(@pomodoro) do |f| %>
+  <%= f.button :submit, 'finish_index_path' %>
+<% end %>

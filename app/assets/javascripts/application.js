@@ -41,26 +41,40 @@ $(document).ready(function () {
 
 // set started_at as the begin time
 
+var $pomodoro = $('#pomodoro-data')
 
+  var started_at = $pomodoro.data('started_at');
+  if (started_at) {
+    var duration_in_minutes = $pomodoro.data('duration_in_minutes')
+    console.log(started_at)
+    var startedAtDate = new Date(started_at);
+    var pomodoroEndTime = new Date(startedAtDate.getTime() + 1 * 60000);
+    var now = Date.now();
+    var millisecondsUntilPomodoroDone = pomodoroEndTime.getTime() - now;
 
-  const started_at = $('#pomodoro-data').data('started_at');
-  const duration_in_minutes = $('#pomodoro-data').data('duration_in_minutes')
-  console.log(started_at)
-  const startedAtDate = new Date();
-  const getAlert = function () {
-    alert('It is working!')
+    var pomodoroIsDone = function () {
+      alert('Pomodoro is done!')
+    }
+    if (millisecondsUntilPomodoroDone < 0) {
+      pomodoroIsDone();
+    } else {
+      window.setInterval(pomodoroIsDone, millisecondsUntilPomodoroDone)
+      // interval setTimeout() for minutes in between. When timeout is done, tell rails pomodoro is done.
+    }
+
   }
 
 
+  
+
+
   // Alert when timer is done 
-window.setTimeout(getAlert, 2000)
 
 
 
 
 // add the duration_in_minutes and that is the end time
-const pomodoroLength = started_at + duration_in_minutes
-console.log(pomodoroLength)
+
 // Need to know how much time is between now and the end time
 
 // JS Wait function? JQuery Wait function? Alert saying "you are done!"
@@ -69,10 +83,6 @@ console.log(pomodoroLength)
 
 
 
-// convert started_at into a date
-const today = Date.parse(startedAtDate) // JS date.parse
-console.log(today)
-//  alert(startedAtDate.getDay());
 
 
 

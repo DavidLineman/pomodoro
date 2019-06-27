@@ -15,11 +15,17 @@ class PomodorosController < ApplicationController
     @pomodoro = current_user.pomodoros.find(params[:id])
   end
 
+  def finish
+    @pomodoro = current_user.pomodoros.find(params[:id])
+    @pomodoro.finish!
+    redirect_to pomodoros_path
+  end
 
   private 
 
   def pomodoro_params
     params.require(:user)
   end
+
 
 end
